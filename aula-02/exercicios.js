@@ -93,3 +93,28 @@ que deve:
 pois a posição na fila deve começar em 1.
 - Utilize a função indexOf() no seu desenvolvimento.
 */
+
+const pacientes = [
+    "Bento Raimundo Cavalcanti", //0
+    "Oliver Samuel Cardoso", // 1
+    "Geraldo Ryan Danilo Carvalho", // 2
+    "Isis Tatiane Sophie Santos", // 3
+    "Clarice Esther Moraes", // 4
+  ];
+
+
+function verificarPosicaoPacienteFila(nomePaciente){
+    const posicao = pacientes.indexOf(nomePaciente);
+    if(posicao !== -1){
+        return posicao +1;
+    }else{
+        return "O paciente não esta na lista"
+    }
+}
+
+const proximoPaciente= "Everton da Silva";
+const resultado = verificarPosicaoPacienteFila(proximoPaciente);
+
+console.log(`A posição de ${proximoPaciente} na fila é ${resultado}`)
+
+

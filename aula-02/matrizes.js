@@ -5,5 +5,5 @@ let matriz = [
         [3,4,5],  //1
         [6,7,8]  //2
 ]
-matriz[1].push(6);
+matriz[1][0];//.push(6);
 console.log(matriz);
