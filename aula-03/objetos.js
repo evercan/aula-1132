@@ -77,5 +77,4 @@ let pessoa1 = {
     3: "mamão"
  }
 
- console.log(frutas."1");
  
