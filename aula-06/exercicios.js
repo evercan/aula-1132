@@ -93,7 +93,8 @@ const alunos = [
 
 //6) Percorrer uma string e contar a frequência de cada caractere, 
 //ou seja quantas vezes cada um tem na string.
-
+/*
+console.timed("for-of");
 const texto = "O meu texto de exemplo de contagem de caracter";
 const obj = {};
 
@@ -106,11 +107,47 @@ for(let caracter of texto){
         }
     }   
 }
-console.log(obj);
-
-//7) Dado um array de arrays, encontrar a soma de todos os números contidos nos arrays internos.
+//console.timeEnd("for-of");
+*/
+//7) Dado um array de arrays, encontrar a soma de todos os números contidos 
+//nos arrays internos.
 //const infoArray = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
 
+const infoArray = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+function somarNumerosArray (array) {
+  let soma = 0;
+  for (let num of array){
+    soma = soma + num;
+  }
+  return soma;
+}
+
+let somaTotal = 0;
+
+//console.time('for-of')
+for (let array of infoArray){
+  let somaInterna = somarNumerosArray(array);
+  somaTotal = somaTotal + somaInterna;
+}
+//console.timeEnd('for-of')
+
+//console.log(somaTotal);
 
 
 //8) Escreva um loop para calcular o fatorial de um número fornecido.
+
+function calculaFatorial(numb){
+    if(numb < 0){
+        return "O fatorial não esta definido para numeros negativos"
+    }
+    let fatorial = 1;
+    for (let i = 1; i <= numb; i++){
+      fatorial *= i;
+    }
+    return fatorial;
+  }
+  
+  let numeroFatorial = -4;
+  let resultado = calculaFatorial(numeroFatorial);  
+  console.log(resultado);
